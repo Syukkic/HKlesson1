@@ -24,7 +24,6 @@
 \setcounter{figure}{0}
 
 \usepackage{csquotes}
-
 \usepackage{media9}
 
 \setmainfont{Noto Sans} % 英文部份 fontspec 的主字形
@@ -68,14 +67,28 @@
 \title{香港第一課}
 \author{梁啟智}
 % \maketitle
+
 \renewcommand\contentsname{目~录}
 \tableofcontents
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+% \addtocontents{toc}{\protect\thispagestyle{empty}}
+% \pagenumbering{gobble}
+\setcounter{page}{0}
+\thispagestyle{empty}
 
+% \newpage
+% \setcounter{page}{0}
+% \thispagestyle{empty}
+% {\protect\thispagestyle{empty}}
 
-
+\newpage
+\setcounter{page}{1}
 \include{data/intro}
 \include{data/preface}
+\clearpage
 
+\newpage
+\setcounter{page}{1}
 \chapter{第一章：認同之爭}
 
 % 1. 香港自古以來不就是中國領土嗎？
