@@ -1,0 +1,200 @@
+\documentclass[14pt,a4paper]{report}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+
+\usepackage{bookmark}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Sharelatex Example},
+    bookmarks=true,
+    pdfpagemode=FullScreen,
+}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[]{caption2} %新增调用的宏包
+\graphicspath{ {./images/} }
+\renewcommand{\figurename}{圖} %重定义编号前缀词
+\renewcommand{\captionlabeldelim}{.~} %重定义分隔符
+\renewcommand {\thefigure}{\thesection{}.\arabic{figure}}
+\setcounter{figure}{0}
+
+\usepackage{csquotes}
+
+\usepackage{media9}
+
+\setmainfont{Noto Sans} % 英文部份 fontspec 的主字形
+\setCJKmainfont{Noto Sans CJK TC DemiLight} % 中文部份 xeCJK 的主字形
+\defaultfontfeatures{Ligatures=TeX} % 用 `` 表示英文左雙引號, '' 表示右雙引號
+\xeCJKsetup{CJKglue=\hspace{0pt plus .08 \baselineskip }}
+\xeCJKsetup{RubberPunctSkip=false}
+\xeCJKsetup{PunctStyle=plain} % 標點符號一概全形
+\xeCJKsetup{CheckSingle=true} % 首字不放行尾，似乎不太有用
+
+\usepackage{anysize}
+\marginsize{.8in}{.8in}{1in}{1in} % 設定邊界
+\setlength{\parskip}{.8em} % 段落距 0.8 字
+\setlength{\parindent}{2em} % 段落開頭空兩字
+
+\usepackage{titletoc}
+\usepackage{titlesec}
+% \titleformat{\chapter}{\raggedright\Huge\bfseries}{第\, \thechapter\,章}{1em}{}
+\titleformat{\chapter}{\raggedright\Huge\bfseries}{}{1em}{}
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+    \vspace{150cm}
+    \textsc{} \\[8cm]
+	{\Huge\bfseries 香港第一課 \par}
+	\vspace{2cm}
+    {\Large\itshape 梁啟智 \par}
+    % \vfill
+    \vspace{4cm}
+	{\large\itshape 文章首發在 \href{https://matters.news/@leungkaichihk/%E9%A6%99%E6%B8%AF%E7%AC%AC%E4%B8%80%E8%AA%B2-%E7%B0%A1%E4%BB%8B%E5%8F%8A%E7%9B%AE%E9%8C%84-zdpuB2J818r8yUSDeZ4vDARrnQ4ut3S2UYjALXHJ16jp25w4P}{Matters.news} 網站 \par}
+% 	supervised by\par
+% 	Dr.~Mark \textsc{Brown}
+
+% 	\vfill
+
+% % Bottom of the page
+% 	{\large \today\par}
+\end{titlepage}
+\title{香港第一課}
+\author{梁啟智}
+% \maketitle
+\renewcommand\contentsname{目~录}
+\tableofcontents
+
+
+
+\include{data/intro}
+\include{data/preface}
+
+\chapter{第一章：認同之爭}
+
+% 1. 香港自古以來不就是中國領土嗎？
+\include{data/part1/c01}
+\setcounter{figure}{0}
+% 2. 中國政府錯解香港歷史了嗎？
+\include{data/part1/c02}
+\setcounter{figure}{0}
+% 3. 中國大陸誤解香港帶來什麼後果？
+\include{data/part1/c03}
+\setcounter{figure}{0}
+% 4. 香港認同是怎樣開始的？
+\include{data/part1/c04}
+\setcounter{figure}{0}
+% 5. 香港認同和中國認同是否對立？
+\include{data/part1/c05}
+\setcounter{figure}{0}
+% 6. 香港人當年是否害怕九七？
+\include{data/part1/c06}
+\setcounter{figure}{0}
+% 7. 香港人當年有否喜迎九七？
+\include{data/part1/c07}
+\setcounter{figure}{0}
+% 8. 為什麼九七後的香港人更抗拒中國大陸？
+\include{data/part1/c08}
+\setcounter{figure}{0}
+% 9. 為什麼香港人不集中力量發展經濟，而在認同問題上糾纏？
+\include{data/part1/c09}
+\setcounter{figure}{0}
+% 10. 本土主義和中港矛盾為何在近年急速冒起？
+\include{data/part1/c10}
+\setcounter{figure}{0}
+% 11. 香港人都是中國人，為何還要討論身分認同？
+\include{data/part1/c11}
+\setcounter{figure}{0}
+% 12. 為什麼會有香港人反對國民教育？
+\include{data/part1/c12}
+\setcounter{figure}{0}
+% 13. 普通話會取代粵語成為香港的主流語言嗎？
+\include{data/part1/c13}
+\setcounter{figure}{0}
+
+\chapter{第二章：制度之爭}
+
+% 14. 中港對特區政治制度的最大分歧是什麼？
+\include{data/part2/c14}
+\setcounter{figure}{0}
+% 15. 香港真的實行三權分立嗎？
+\include{data/part2/c15}
+\setcounter{figure}{0}
+% 16. 香港真的實行高度自治嗎？
+\include{data/part2/c16}
+\setcounter{figure}{0}
+% 17. 為什麼外國政府常常對香港問題說三道四？
+\include{data/part2/c17}
+\setcounter{figure}{0}
+% 18. 為什麼特首選舉會被批評為假選舉？
+\include{data/part2/c18}
+\setcounter{figure}{0}
+% 19. 為什麼特首和特區政府總是民望低落？
+\include{data/part2/c19}
+\setcounter{figure}{0}
+% 20. 英國人留下來的制度為何九七後就行不通？
+\include{data/part2/c20}
+\setcounter{figure}{0}
+% 21. 為什麼立法會議員只懂批評不會建設？
+\include{data/part2/c21}
+\setcounter{figure}{0}
+% 22. 為什麼立法會議員變得越來越激進？
+\include{data/part2/c22}
+\setcounter{figure}{0}
+% 23. 為什麼立法會一天到晚都在「拉布」而不議事？
+\include{data/part2/c23}
+\setcounter{figure}{0}
+% 24. 為什麼香港的法院會有外籍法官？
+\include{data/part2/c24}
+\setcounter{figure}{0}
+% 25. 為什麼會有香港人反對人大釋法？
+\include{data/part2/c25}
+\setcounter{figure}{0}
+% 26. 區議員的職責不就是服務街坊，為何要政治化？
+\include{data/part2/c26}
+\setcounter{figure}{0}
+% 27. 為什麼香港會有這麼多民意調查？
+\include{data/part2/c27}
+\setcounter{figure}{0}
+% 28. 為什麼無綫電視會被稱為 CCTVB？
+\include{data/part2/c28}
+\setcounter{figure}{0}
+% 29. 為什麼香港一天到晚都有示威遊行？
+\include{data/part2/c29}
+\setcounter{figure}{0}
+% 30. 為什麼香港警察近年屢受批評？ 
+\include{data/part2/c30}
+\setcounter{figure}{0}
+% 31. 為什麼香港的抗爭近年越來越暴力激進？
+\include{data/part2/c31}
+\setcounter{figure}{0}
+
+\chapter{第三章：往何處去}
+
+% 32. 為什麼香港人在九七後才忽然熱衷爭取民主？
+\include{data/part3/c32}
+\setcounter{figure}{0}
+% 33. 九七後的香港政制不是比九七前更民主嗎？
+\include{data/part3/c33}
+\setcounter{figure}{0}
+% 34. 為什麼香港到現在還未有普選？
+\include{data/part3/c34}
+\setcounter{figure}{0}
+% 35. 普選可以解決香港所有問題嗎？
+\include{data/part3/c35}
+\setcounter{figure}{0}
+% 36. 一國兩制還有將來嗎？
+\include{data/part3/c36}
+\setcounter{figure}{0}
+
+% 結語：論系統性敗壞
+\include{data/conclusion}
+
+
+\end{document}
