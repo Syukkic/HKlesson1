@@ -1,6 +1,13 @@
 \documentclass[14pt,a4paper]{report}
 \usepackage{fontspec}
 \usepackage{xeCJK}
+\setmainfont{Noto Sans} % 英文部份 fontspec 的主字形
+\setCJKmainfont{Noto Sans CJK TC DemiLight} % 中文部份 xeCJK 的主字形
+\defaultfontfeatures{Ligatures=TeX} % 用 `` 表示英文左雙引號, '' 表示右雙引號
+\xeCJKsetup{CJKglue=\hspace{0pt plus .08 \baselineskip }}
+\xeCJKsetup{RubberPunctSkip=false}
+\xeCJKsetup{PunctStyle=plain} % 標點符號一概全形
+\xeCJKsetup{CheckSingle=true} % 首字不放行尾，似乎不太有用
 
 \usepackage{bookmark}
 \usepackage{hyperref}
@@ -17,7 +24,7 @@
 
 \usepackage{float}
 \usepackage{graphicx}
-\usepackage[]{caption2} %新增调用的宏包
+\usepackage[]{caption2}
 \graphicspath{ {./images/} }
 \renewcommand{\figurename}{圖} %重定义编号前缀词
 \renewcommand{\captionlabeldelim}{.~} %重定义分隔符
@@ -26,14 +33,6 @@
 
 \usepackage{csquotes}
 \usepackage{media9}
-
-\setmainfont{Noto Sans} % 英文部份 fontspec 的主字形
-\setCJKmainfont{Noto Sans CJK TC DemiLight} % 中文部份 xeCJK 的主字形
-\defaultfontfeatures{Ligatures=TeX} % 用 `` 表示英文左雙引號, '' 表示右雙引號
-\xeCJKsetup{CJKglue=\hspace{0pt plus .08 \baselineskip }}
-\xeCJKsetup{RubberPunctSkip=false}
-\xeCJKsetup{PunctStyle=plain} % 標點符號一概全形
-\xeCJKsetup{CheckSingle=true} % 首字不放行尾，似乎不太有用
 
 \usepackage{anysize}
 \marginsize{.8in}{.8in}{1in}{1in} % 設定邊界
